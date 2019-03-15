@@ -38,7 +38,7 @@ This is an output plugin because fluentd's filter doesn't allow tag rewrite.
 
 | fluent-plugin-tag_rewrite | fluentd |
 |-------------------|---------|
-| >= 1.0.0 | >= v1.0.0 < 2 |
+| >= 1.0.0 | >= v1.14.0 < 2 |
 
 #### Contributing
 
