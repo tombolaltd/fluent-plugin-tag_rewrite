@@ -1,7 +1,7 @@
 # encoding: utf-8
 Gem::Specification.new do |gem|
     gem.name = "fluent-plugin-tag_rewrite"
-    gem.description = "This input plugin allows you append tag"
+    gem.description = "This input plugin allows you rewrite tag"
     gem.homepage = "https://github.com/tombolaltd/fluent-plugin-tag_rewrite"
     gem.summary = gem.description
     gem.version = "1.0.0"
