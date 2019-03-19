@@ -6,13 +6,13 @@ class Fluent::Plugin::TagRewriteOutput < Fluent::Plugin::Output
   helpers :event_emitter
 
   config_param :tag_prefix, :string, :default => nil
-  config_param :tag_sufix, :string, :default => nil
+  config_param :tag_suffix, :string, :default => nil
 
   def configure(conf)
     super
 
     if @tag_prefix.nil? && @tag_prefix.nil?
-      raise Fluent::ConfigError, "tag_prefix or tag_sufix has not been provided"
+      raise Fluent::ConfigError, "Neither tag_prefix nor tag_suffix has not been provided"
     end
   end
 
@@ -23,16 +23,16 @@ class Fluent::Plugin::TagRewriteOutput < Fluent::Plugin::Output
   def process(tag, es)
     es.each do |time, record|
       begin
-        rewrited_tag = tag
+        rewritten_tag = tag
         unless @tag_prefix.nil?
-          rewrited_tag = @tag_prefix + "." + rewrited_tag
+          rewritten_tag = @tag_prefix + "." + rewritten_tag
         end
-        unless @tag_sufix.nil?
-          rewrited_tag = rewrited_tag + "." + @tag_sufix
+        unless @tag_suffix.nil?
+          rewritten_tag = rewritten_tag + "." + @tag_suffix
         end
-        router.emit(rewrited_tag, time, record)
+        router.emit(rewritten_tag, time, record)
       rescue
-        $log.error("unexpected error in append_tag", :error => $!.to_s)
+        $log.error("unexpected error in tag_rewrite", :error => $!.to_s)
         $log.error_backtrace
       end
     end
