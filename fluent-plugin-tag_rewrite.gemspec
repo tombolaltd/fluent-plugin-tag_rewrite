@@ -4,7 +4,7 @@ Gem::Specification.new do |gem|
     gem.description = "This input plugin allows you rewrite tag"
     gem.homepage = "https://github.com/tombolaltd/fluent-plugin-tag_rewrite"
     gem.summary = gem.description
-    gem.version = "1.0.0"
+    gem.version = "2.0.0"
     gem.license = 'MIT'
     gem.authors = ["Sohaib Maroof"]
     gem.email = "sohaib.maroof@tombola.com"
