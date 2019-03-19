@@ -16,10 +16,10 @@ This is an output plugin because fluentd's filter doesn't allow tag rewrite.
     <match **>
       @type tag_rewrite
       tag_prefix start
-      tag_sufix end
+      tag_suffix end
     </match>
    
- Optional parameter is either tag_prefix or tag_sufix
+ Optional parameter is either tag_prefix or tag_suffix
 
 #### Example 
   If your fluentd match configuration is the same as above followed by the match configuration like this:
