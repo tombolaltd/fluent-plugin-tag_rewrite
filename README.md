@@ -3,9 +3,9 @@
 
 #### Overview
 
-Rewrite tag for [Fluentd](https://www.fluentd.org). It is designed to rewrite the tags and re-emit the record with rewrited tag. Value can only be added at the start or the end of the tag.
+Rewrite tag for [Fluentd](https://www.fluentd.org). It is designed to rewrite the tags and re-emit the record with rewritten tag. Values can only be added at the start or the end of the tag.
 
-This is an output plugin because fluentd's filter doesn't allow tag rewrite.
+This is an output plugin because fluentd's filter doesn't allow tag rewriting.
 
 #### Installation
 
@@ -19,10 +19,10 @@ This is an output plugin because fluentd's filter doesn't allow tag rewrite.
       tag_suffix end
     </match>
    
- Optional parameter is either tag_prefix or tag_suffix
+ You must provide at least one of tag_prefix or tag_suffix
 
 #### Example 
-  If your fluentd match configuration is the same as above followed by the match configuration like this:
+  If your fluentd match configuration is the same as above followed by a match configuration like this:
  
     <match start.fluent.**>
       @type stdout
