@@ -1,10 +1,10 @@
 # encoding: utf-8
 Gem::Specification.new do |gem|
     gem.name = "fluent-plugin-tag_rewrite"
-    gem.description = "This input plugin allows you to rewrite tag"
+    gem.description = "This fluentd plugin allows you to rewrite message tag"
     gem.homepage = "https://github.com/tombolaltd/fluent-plugin-tag_rewrite"
     gem.summary = gem.description
-    gem.version = "2.0.1"
+    gem.version = "2.0.2"
     gem.license = 'MIT'
     gem.authors = ["Sohaib Maroof"]
     gem.email = "sohaib.maroof@tombola.com"
